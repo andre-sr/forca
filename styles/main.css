@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(107, 120, 146);
+    color: white;
+}
+
+header {
+    padding: 1em;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+main {
+    background-color: rgba(90, 101, 121, 0.514);
+    height: 500px;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    font-size: 1.2em;
+}
+
+#word-div{
+    margin: 2em 0;
+    background-color: rgba(127, 255, 212, 0.11);
+}
+
+#word-div ol {
+    display: flex;
+}
+
+#word-div ol li {
+    border-bottom: 2px solid rgb(255, 255, 255);
+    padding: 0 2px;
+    margin: 2px;
+}
+
+#alphabet-div {
+    background-color: rgba(0, 255, 255, 0.055);
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#alphabet-div table {
+    display: flex;
+    justify-content: center;
+}
+
+#alphabet-div table tr {
+    display: flex;
+    justify-content: center;
+}
+
+#alphabet-div table tr td {
+    margin: 3px 6px;
+    cursor: pointer;
+}
