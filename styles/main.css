@@ -7,6 +7,7 @@ body {
     background-color: rgb(107, 120, 146);
     color: white;
     font-family: "Martian Mono", monospace;
+    overflow: hidden;
 }
 
 header {
@@ -78,4 +79,8 @@ header {
 
 .unvisible {
     color: rgba(240, 248, 255, 0);
+}
+
+.hidden {
+    visibility: hidden;
 }

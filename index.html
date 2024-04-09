@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/modal.css">
     <script src="/script/word-list.js" defer></script>
     <script src="/script/main.js" defer></script>
     
@@ -64,6 +65,19 @@
             </table>
         </div>
     </main>
+
+    <div id="modal-win" class="modal hidden">
+        <div>
+            <h1>Parabéns, você venceu!</h1>
+            <button onclick="restartGame() ">Jogar denovo</button>
+        </div>
+    </div>
+    <div id="modal-lose" class="modal hidden">
+        <div>
+            <h1>Infelizmente voce perdeu! :(</h1>
+            <button onclick="restartGame() ">Tentar denovo</button>
+        </div>
+    </div>
     <footer>
         
     </footer>

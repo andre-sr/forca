@@ -1,15 +1,17 @@
 //VARIAVEIS
 const olElement = document.querySelector('#word-ol')
 const tryElement = document.querySelector('#try')
-tryElement
-var chosedWord = 0
-var remaingTry = 6
+const modalWin = document.querySelector('#modal-win')
+const modalLose = document.querySelector('#modal-lose')
+
+var chosedWord
+var remaingTry = 5
+var countToWin = 0
 
 //FUNCOES
 function randomWord() {
     let number = Math.floor(Math.random() * wordList.length)
     chosedWord = wordList[number]
-    console.log(chosedWord)
 }
 
 function creator() {
@@ -20,6 +22,7 @@ function creator() {
         element.id = `_${i}`
         olElement.appendChild(element)
     }
+    
 
     tryElement.textContent = remaingTry
 }
@@ -48,6 +51,12 @@ function testLetter(letter) {
     }
     if (remaingTry === 0) {
         // fail screen
+        console.log('Perdeu!')
+        modalLose.classList.remove('hidden')
+    }
+    if (countToWin === chosedWord.length) {
+        console.log('Ganhou!')
+        modalWin.classList.remove('hidden')
     }
 }
 
@@ -56,9 +65,8 @@ function trueTest(letter, x) {
         let tempElement = document.querySelector(`#_${x}`)
         if (tempElement.textContent == letter) {
             tempElement.classList.remove('unvisible')
+            countToWin = countToWin + 1
         }
-    let letterElement = document.querySelector(`#${letter}`)
-    letterElement.classList.remove('unvisible')
 }
 
 function falseTeste(letter) {
@@ -68,6 +76,14 @@ function falseTeste(letter) {
     letterElement.setAttribute('class', 'notclick')
     letterElement.style.color = "red"
     //resposta visual
+}
+
+function restartGame() {
+    modalWin.classList.add('hidden')
+    modalLose.classList.add('hidden')
+    randomWord()
+    creator()
+    
 }
 
 //EVENTOS
