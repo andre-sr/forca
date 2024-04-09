@@ -17,6 +17,7 @@ function creator() {
         let element = document.createElement('li')
         element.textContent = chosedWord[i]
         element.classList.add('unvisible')
+        element.id = `_${i}`
         olElement.appendChild(element)
     }
 
@@ -38,7 +39,7 @@ function testLetter(letter) {
     let testeRecord = false
     for (let i = 0; i < chosedWord.length; i++) {
         if (letter == chosedWord[i]) {
-            trueTest(letter)
+            trueTest(letter, i)
             testeRecord = true
         } 
     }
@@ -50,8 +51,12 @@ function testLetter(letter) {
     }
 }
 
-function trueTest(letter) {
+function trueTest(letter, x) {
     console.log('é nois')
+        let tempElement = document.querySelector(`#_${x}`)
+        if (tempElement.textContent == letter) {
+            tempElement.classList.remove('unvisible')
+        }
     let letterElement = document.querySelector(`#${letter}`)
     letterElement.classList.remove('unvisible')
 }
