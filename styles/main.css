@@ -13,7 +13,7 @@ header {
     font-weight: 700;
 }
 
-main {
+.container {
     background-color: rgba(90, 101, 121, 0.514);
     height: 500px;
     width: 800px;
@@ -23,6 +23,13 @@ main {
     align-items: center;
     border-radius: 1em;
     font-size: 1.2em;
+}
+
+.container-header {
+    width: 800px;
+    display: flex;
+    justify-content:space-around;
+
 }
 
 #word-div{
@@ -59,4 +66,14 @@ main {
 #alphabet-div table tr td {
     margin: 3px 6px;
     cursor: pointer;
+}
+
+/*CONTEXTUAL*/
+.notclick {
+    pointer-events: none;
+    cursor: none;
+}
+
+.unvisible {
+    color: rgba(240, 248, 255, 0);
 }
