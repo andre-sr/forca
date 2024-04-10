@@ -37,7 +37,7 @@ header {
 
 #word-div{
     margin: 2em 0;
-    background-color: rgba(127, 255, 212, 0.11);
+    background-color: rgba(127, 255, 212, 0);
 }
 
 #word-div ol {
@@ -51,7 +51,7 @@ header {
 }
 
 #alphabet-div {
-    background-color: rgba(0, 255, 255, 0.055);
+    background-color: rgba(0, 255, 255, 0);
     font-size: 1.2em;
     font-weight: 600;
 }
@@ -69,6 +69,7 @@ header {
 #alphabet-div table tr td {
     margin: 3px 6px;
     cursor: pointer;
+    text-shadow: 1px 1px rgba(41, 40, 40, 0.849);
 }
 
 /*CONTEXTUAL*/
@@ -79,8 +80,18 @@ header {
 
 .unvisible {
     color: rgba(240, 248, 255, 0);
+    font-family: ;
 }
 
 .hidden {
+    transition: 1000ms;
     visibility: hidden;
+}
+
+.red {
+    color: rgb(250, 44, 44);
+}
+
+.green {
+    color: rgb(95, 212, 95);
 }
